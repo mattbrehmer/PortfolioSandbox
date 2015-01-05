@@ -1,13 +1,21 @@
 Portfolio Visualization Sandbox
 ========
 
+![Portfolio Visualization Sandbox: Heatmaps + Boxplots](screenshots/portfolio-cal.png "Portfolio Visualization Sandbox: A differential calendar heatmap with aligned boxplot summary chart.")
+
 This project contains code for a [R/Shiny](http://www.rstudio.com/shiny/) application that produces several types of visualizations of energy use for portfolios of spaces over time. These portfolios are typically those of multi-space organizations such as universities, health care networks, or school boards. 
+
+An [instance of the portfolio visualization sandbox](https://mattbrehmer.shinyapps.io/PortfolioSandbox/) is running on [shinyapps.io](http://www.shinyapps.io/). Username: ieeevis / password: vis2015.
 
 These visualizations include [ggplot2](http://ggplot2.org/) implementations of faceted time-series line plots, stacked area charts, (calendar) heatmaps, bar charts, box plots, histogram/density plots, and a ranking visualization inspired by [Caleydo's LineUp](http://lineup.caleydo.org). The application also includes a map-based visualization using [jcheng5's leaflet-shiny](https://github.com/jcheng5/leaflet-shiny) package.
 
 There are 3 main views on portfolio data, each having a dedicated tab in the interface: (1) seasonal, monthly, or calendar heatmaps with aligned summary charts (boxplots, histogram/density plots, and bar charts), used for analysis at a coarse time granularity; (2) a "LineUp" ranking visualization, used for comparing a small number of itmes at coarse time granularities; (3) a stacked area with accompanying individual faceted line plots for fine-scale time-series load profile analysis.
 
+![Portfolio Visualization Sandbox: LineUp plot](screenshots/portfolio-lineup.png "A LineUp ranking visualization for a set of 10 research buildings.")
+
 Visualizations are drawn using [reactive functions](http://rstudio.github.io/shiny/tutorial/#reactivity) bound to global controls for selection, filtering, aggregation, and normalization. Time window filtering is accomplished with a date range selector, options to focus on daytime/nighttime and weekday/weekend, as well as with advanced options to filter by season or month. Space metadata filtering is accomplished using a conjunction of filters on space name, space use, use type, space type, tag, and city; advanced options are included to filter by space area, building age, occupant count, and operating hours. Spaces can be aggregated by shared space use, use type, space type, tag, and city. Their data can be normalized by space area, occupant count, and operating hours, as well as by weather (# HDDs and CDDs). 
+
+![Portfolio Visualization Sandbox: Time Series Stacked Area chart with Faceted Line Charts](screenshots/portfolio-lines.png "Time Series stacked area chart with faceted line charts.")
 
 ## Portfolio Data
 
