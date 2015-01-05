@@ -23,7 +23,7 @@ The application loads data from three sources:
 
 * [portfolio-name]/[portfolio-name]-performance.csv
 
-1\ Performance data for all spaces in a portfolio; currently, the application can understands the resource types and temporal granularities returned by the Pulse R API to fetch portfolio energy use performance data.
+1\ Performance data for all spaces in a portfolio.
 
 * [portfolio-name]/[portfolio-name]-metadata.csv
 
