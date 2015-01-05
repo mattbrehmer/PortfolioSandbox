@@ -31,7 +31,7 @@ source("dataFunctions.R", local=TRUE)
 
 #load space metadata, performance data from CSV in local directory
 meta.dt <- read.csv(
-	"sandbox/sandbox-metadata.csv",
+	"data/portfolio-metadata.csv",
 	stringsAsFactors=TRUE)
 
 #call metadata tidying function from portfolioWrangling.R
@@ -46,7 +46,7 @@ meta.dt$use_type <- factor(meta.dt$use_type)
 
 #load portfolio performance data from CSV in local directory
 performance.dt <- unique(as.data.table(read.csv(
-	"sandbox/sandbox-performance.csv",
+	"data/portfolio-performance.csv",
 	stringsAsFactors=FALSE)
 ))
 
@@ -172,7 +172,7 @@ performance.dt[Year==2012]$baselineCDD <- performance.dt[Year==2012]$CDD
 # load and tidy the tags for a portfolio of spaces
 
 #load and format portfolio tags from CSV in local directory
-spacetags.dt <- as.data.table(read.csv("sandbox/sandbox-tags.csv",stringsAsFactors=TRUE))
+spacetags.dt <- as.data.table(read.csv("data/portfolio-tags.csv",stringsAsFactors=TRUE))
 
 if(exists("spacetags.dt")) {
 	

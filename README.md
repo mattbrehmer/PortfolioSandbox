@@ -35,7 +35,7 @@ The application loads data from three sources:
 
 ### Example Data
 
-An example portfolio is provided in the [sandbox/](https://github.com/mattbrehmer/PortfolioSandbox/tree/master/sandbox) folder. This contains space metadata, space tags, and energy use data for a small portfolio (6 spaces) over a time span of 2 years (Jan 2012 - Dec 2013) at a 4h granularity. Data for individual years is also provided. The performance data contains multiple resources (Electricity, Steam, Natural Gas), as well as measurements of Total, Total Baseload, and Electricity Baseload. 2012 Data is also used as a baseline for 2013 (paired data points are aligned to matching week numbers and weekdays).
+An example portfolio is provided in the [data/](https://github.com/mattbrehmer/PortfolioSandbox/tree/master/data) folder. This contains space metadata, space tags, and energy use data for a small portfolio (6 spaces) over a time span of 2 years (Jan 2012 - Dec 2013) at a 4h granularity. Data for individual years is also provided. The performance data contains multiple resources (Electricity, Steam, Natural Gas), as well as measurements of Total, Total Baseload, and Electricity Baseload. 2012 Data is also used as a baseline for 2013 (paired data points are aligned to matching week numbers and weekdays).
 
 The application has been used for university campus and school board portfolios with up to ~100 spaces. 
 
