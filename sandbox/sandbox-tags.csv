@@ -1,8 +1,8 @@
 id,name,tag,tag,tag,tag
-1193,"Restaurant Building",kitchen,dining,,
-1236,"Westpoint Tower",residential,,,
-1244,"Airport Research Park",planes,,,
+1193,"Omega Building",kitchen,dining,,
+1236,"Epsilon Tower",residential,,,
+1244,"Delta Research Park",planes,,,
 2119,NULL,na,,,
-3258,"Sushi Restaurant",kitchen,dining,fish,
-3259,"Indian Restaurant",kitchen,dining,ovens,fish
-3260,"Italian Restaurant",kitchen,dining,ovens,
+3258,"Gamma Restaurant",kitchen,dining,fish,
+3259,"Beta Restaurant",kitchen,dining,ovens,fish
+3260,"Alpha Restaurant",kitchen,dining,ovens,
