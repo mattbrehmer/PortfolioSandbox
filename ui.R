@@ -282,7 +282,7 @@ shinyUI(pageWithSidebar(
 			h5("About:"),
 			p("This is a sandbox environment for creating visualization sketches relating to the energy use of a portfolio of buildings over a 2 year period. 
 			2012 data serves as a 'baseline' for 2013; there is no baseline for 2012."),		
-			p("Contact: matt.brehmer@pulseenergy.com / brehmer@cs.ubc.ca")
+			p("Contact: @mattbrehmer | brehmer@cs.ubc.ca")
 		)
 	)		
 ))
