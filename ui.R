@@ -109,7 +109,7 @@ shinyUI(pageWithSidebar(
 		tabsetPanel(
 			id="vizTabs",
 			
-			tabPanel("Heatmaps",
+			tabPanel("Matrix + Boxplots",
 							 
 							 div(class="span15",
 							 		
@@ -120,7 +120,7 @@ shinyUI(pageWithSidebar(
 							 					plotOutput("heatmapPlot",width="100%",height="auto"),
 							 					wellPanel(
 							 						h5("Description:"),
-							 						p("-- 'Quantity' values are displayed as heatmap tiles for each individual 
+							 						p("-- 'Quantity' values are displayed as matrix cells for each individual 
 							 					 	or aggregate space (y axis) for each interval (x axis).")
 							 					)
 							 				),
@@ -130,7 +130,7 @@ shinyUI(pageWithSidebar(
 							 					plotOutput("calendarPlot",width="auto",height="auto"),
 							 					wellPanel(
 							 						h5("Description:"),
-							 						p("-- 'Quantity' values are displayed as heatmap tiles for each individual 
+							 						p("-- 'Quantity' values are displayed as matrix cells for each individual 
 							 					 	or aggregate space (vertical facets) for each calendar date.")
 							 					)
 							 				),
@@ -139,7 +139,7 @@ shinyUI(pageWithSidebar(
 							 					condition = "input.diffAbsRel != 'no'",
 							 					wellPanel(
 							 						p("-- Differential 'Quantity' values, computed as the absolute or relative (%) difference relative to a baseline
-							 						(in this case, 2012 values, aligned by week and weekday), are displayed as heatmap tiles for each individual or 
+							 						(in this case, 2012 values, aligned by week and weekday), are displayed as matrix cells for each individual or 
 							 						aggregate space (y axis) for each interval (x axis)."), 
 							 						p("-- Decreases are blue, increases are red, and unchanged is white; relative differences are capped at ±100%."), 
 							 						p("-- Omitting outages is useful when space shut-downs or start-ups in either year skew the scale."),
@@ -149,7 +149,7 @@ shinyUI(pageWithSidebar(
 							 				
 							 				h5("Options:"),							 				
 							 				div(class="span15", 
-							 						div(class="span2", radioButtons("heatmap_radio", "Select type of heatmap:",c("Basic" = "basic","Calendar" = "cal"))),
+							 						div(class="span2", radioButtons("heatmap_radio", "Select type of matrix:",c("Basic" = "basic","Calendar" = "cal"))),
 							 						div(class="span2", radioButtons("diffAbsRel", "Show Differential?", c("No" = "no","Absolute" = "abs", "Relative (%)" = "rel"))),
 							 						div(class="span2", conditionalPanel(
 							 							condition = "input.diffAbsRel != 'no'",
@@ -166,7 +166,7 @@ shinyUI(pageWithSidebar(
 							 					plotOutput("boxPlot",width="100%",height="auto"),
 							 					wellPanel(
 							 						h5("Description:"),
-							 						p("-- Box plots for individual or aggregate spaces (y axis), sorted by mean 'Quantity' values."),
+							 						p("-- Boxplots for individual or aggregate spaces (y axis), sorted by mean 'Quantity' values."),
 							 						p("-- They represent the distribution of values along the x-axis: 
 							 					 	the median (midline), the interquartile range or IQR (box), the whiskers (1.5*IQR), 
 							 					 	and outliers (dots)."), 
@@ -205,7 +205,7 @@ shinyUI(pageWithSidebar(
 							 )
 			),	
 			
-			tabPanel("LineUp",
+			tabPanel("Bump + Bar Plot",
 							 							 
 # 							 tabsetPanel(
 # 							 	id="lineupTabs",
@@ -220,8 +220,7 @@ shinyUI(pageWithSidebar(
 							 	based on mean quantity across current time window."),
 							 	p("-- Bar lengths indicate absolute 'Quantity' values. "),
 							 	p("-- Alpha values for bars and lines are adjusted such that spaces that change rank 
-							 					 	are more salient than those that do not."),
-							 	p("-- Inspired by Caleydo LineUp (Gratzl et al. (IEEE TVCG / Proc. InfoVis 2013).")
+							 					 	are more salient than those that do not.")
 							 )
 # # 							 	tabPanel("rCharts",
 # 							 					 
@@ -244,7 +243,7 @@ shinyUI(pageWithSidebar(
 # 							 )
 			),
 			
-			tabPanel("Line Plots",
+			tabPanel("Stack + Facets",
 							 
 							 plotOutput("stackedTimeSeriesPlot",width="100%",height="600px"),
 							 wellPanel(uiOutput("highlight_select")),
@@ -274,7 +273,7 @@ shinyUI(pageWithSidebar(
 # 							 #tableOutput("view"), # for debugging
 # 							 #numericInput("obs", "Number of observations to view:", 10) # for debugging
 # 			),
-			selected="Heatmaps"
+			selected="Matrix + Boxplots"
 		),
 		wellPanel(
 			h4("By Matt Brehmer"),
