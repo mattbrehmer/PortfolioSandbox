@@ -54,7 +54,7 @@ getIntervalSelect <- reactive({
 	
 	dateRange <- as.numeric(max(getDateFilter())-min(getDateFilter()))
 	
-	if (input$vizTabs == "Heatmaps")
+	if (input$vizTabs == "Matrix + Boxplots")
 	{
 		if (dateRange > 365 && getMonthFilter() == "all")
 			values$selectedInterval <- "season"
@@ -64,7 +64,7 @@ getIntervalSelect <- reactive({
 		if (!is.null(input$heatmap_radio) && input$heatmap_radio == "cal")
 			values$selectedInterval <- "DayOfYear"
 	}
-	else if (input$vizTabs == "LineUp")
+	else if (input$vizTabs == "Bump + Bar Plot")
 	{
 		if (dateRange > 365 && getSeasonFilter() == "all" && getMonthFilter() == "all")
 			values$selectedInterval <- "Year"
@@ -73,7 +73,7 @@ getIntervalSelect <- reactive({
 		else
 			values$selectedInterval <- "month"
 	}
-	else if (input$vizTabs == "Line Plots")
+	else if (input$vizTabs == "Stack + Facets")
 	{
 		if (dateRange > 180 && getMonthFilter() == "all")
 			values$selectedInterval <- "month"
