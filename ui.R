@@ -277,7 +277,7 @@ shinyUI(pageWithSidebar(
 		),
 		wellPanel(
 			h4("By Matt Brehmer"),
-			p("2013-2014"),
+			p("2013-2015"),
 			h5("About:"),
 			p("This is a sandbox environment for creating visualization sketches relating to the energy use of a portfolio of buildings over a 2 year period. 
 			2012 data serves as a 'baseline' for 2013; there is no baseline for 2012."),		
